@@ -3,8 +3,12 @@ setlocal
 cd /d %~dp0
 if not exist node_modules (
   echo Installing dependencies...
-  npm install
+  call npm install || (echo npm install failed. Press any key to close. & pause & exit /b 1)
 )
-start cmd /k "node server.js"
-start cmd /k "cloudflared tunnel run irgri-tunnel --config C:\Users\SadSock\.cloudflared\config.yml"
-start http://localhost:3000
+
+start "Patchwork Bastion Server" cmd /k "cd /d %~dp0 && node server.js"
+start "Patchwork Bastion Tunnel" cmd /k "cd /d %~dp0 && cloudflared tunnel --config \"C:\\Users\\SadSock\\.cloudflared\\config.yml\" run irgri-tunnel"
+start "Patchwork Bastion" http://localhost:3000
+
+echo Launch commands issued. Press any key to close this window.
+pause

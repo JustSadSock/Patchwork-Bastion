@@ -17,14 +17,15 @@ Prototype 3-player co-op top-down defense with handcrafted/patchwork styling. In
    npm install
    npm start
    ```
-3. Open http://localhost:3000 to load the Canvas client.
+3. Open http://localhost:3000 to load the Canvas client. You can also open `index.html` directly from disk for the offline demo; keep the `public` folder next to it so the relative asset paths resolve.
 
 ### Using `run_local.bat`
 On Windows, double-click `run_local.bat` to:
-- Install dependencies if `node_modules` is missing.
-- Start the Node server on port 3000.
-- Start the Cloudflare tunnel `irgri-tunnel` using the config in `C:\\Users\\SadSock\\.cloudflared\\config.yml`.
+- Install dependencies if `node_modules` is missing (stays open on failures so you can read the error).
+- Start the Node server on port 3000 in its own console.
+- Start the Cloudflare tunnel `irgri-tunnel` using the config in `C:\\Users\\SadSock\\.cloudflared\\config.yml` (command window stays open; the config flag is passed before `run` to satisfy cloudflared's CLI).
 - Open the browser at http://localhost:3000.
+- Leave the launcher window open until you press a key so you can spot any startup errors.
 
 ## Project structure
 - `index.html` — entry point for Netlify/static hosting.
