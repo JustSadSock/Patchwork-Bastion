@@ -23,7 +23,7 @@ Prototype 3-player co-op top-down defense with handcrafted/patchwork styling. In
 On Windows, double-click `run_local.bat` to:
 - Install dependencies if `node_modules` is missing (stays open on failures so you can read the error).
 - Start the Node server on port 3000 in its own console.
-- Start the Cloudflare tunnel `irgri-tunnel` using the config in `C:\\Users\\SadSock\\.cloudflared\\config.yml` (command window stays open; the config flag is passed before `run` to satisfy cloudflared's CLI).
+- Start the Cloudflare tunnel `irgri-tunnel` using the config in `C:\Users\SadSock\.cloudflared\config.yml` (command window stays open; the config flag is passed before `run` to satisfy cloudflared's CLI). If the config lives elsewhere, update the quoted path in `run_local.bat`.
 - Open the browser at http://localhost:3000.
 - Leave the launcher window open until you press a key so you can spot any startup errors.
 
