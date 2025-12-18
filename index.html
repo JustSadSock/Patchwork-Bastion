@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patchwork Bastion</title>
+  <link rel="stylesheet" href="public/styles.css" />
+</head>
+<body>
+  <div id="topbar">
+    <div id="player-strip"></div>
+    <div id="wave-info"></div>
+    <div id="resources"></div>
+  </div>
+  <div id="menu">
+    <div class="panel">
+      <h1>Patchwork Bastion</h1>
+      <div class="row">
+        <input id="name" placeholder="Your name" />
+        <input id="room" placeholder="Room code" />
+      </div>
+      <div class="row">
+        <button id="host">Host</button>
+        <button id="join">Join</button>
+      </div>
+      <div id="status">Offline demo mode until connected</div>
+    </div>
+  </div>
+  <canvas id="game"></canvas>
+  <script src="public/ui.js"></script>
+  <script src="public/audio.js"></script>
+  <script src="public/net.js"></script>
+  <script src="public/render.js"></script>
+  <script src="public/game.js"></script>
+</body>
+</html>

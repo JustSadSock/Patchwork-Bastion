@@ -1,0 +1,1 @@
+Placeholder art lives here. Drop your handcrafted spritesheets or UI PNGs inside this folder and reference them from the canvas renderer. The prototype currently uses vector drawing only, so replacing visuals is as simple as loading your own images in render.js.
